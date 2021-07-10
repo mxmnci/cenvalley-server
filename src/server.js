@@ -7,7 +7,10 @@ const contactUsSchema = require("../schemas/contactUs");
 const generateRequestMessage = require("../utils/generateRequestMessage");
 const generateContactMessage = require("../utils/generateContactMessage");
 
-fastify.register(require("fastify-cors"), { origin: "*" });
+fastify.register(require("fastify-cors"), {
+  origin: "*",
+  methods: ["GET", "POST"],
+});
 
 const HOST = "0.0.0.0";
 
