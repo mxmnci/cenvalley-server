@@ -23,7 +23,7 @@ const sendMail = (from, to, subject, message) => {
           console.log("Email failed to send. Error: " + err);
           reject(false);
         }
-        console.log("Email sent successfully! Info: " + info.response);
+        console.log("Email sent successfully!");
         resolve(true);
       }
     );
