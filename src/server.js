@@ -16,7 +16,7 @@ const HOST = "0.0.0.0";
 
 const PORT = process.env.PORT || 5000;
 
-const contactAddresses = process.env.CONTACT_ADDRESSES;
+const contactAddresses = process.env.CONTACT_ADDRESSES.split(",");
 
 fastify.get("/", (req, res) => {
   res.send("The server is functional 🚀");
